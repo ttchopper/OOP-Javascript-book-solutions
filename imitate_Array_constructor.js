@@ -5,9 +5,11 @@ function MyArray() {
         }
         return i;
     }());
+    
     for (var i = 0; i < args.length; i++) {
         this[i] = args[i];
     }
+    
     this.toString = function () {
         var newStr = ""
         for (var i = 0; i < this.length; i++) {
@@ -20,6 +22,7 @@ function MyArray() {
         }
         return newStr;
     };
+    
     this.push = function (item) {
         this[this.length] = item;
         this.length = this.length + 1;
@@ -43,6 +46,5 @@ function MyArray() {
                 newStr += this[i] + separator;
             }
         }
-        
     };
 }
